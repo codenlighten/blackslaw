@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blacks Law</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+      }
+      iframe {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- choice of 2 pdfs blacks law 2nd edition, and blacks law 4th edition pdfs -->
+
+    <div class="container" id="header">
+      <h1>Blacks Law Dictionary</h1>
+    </div>
+    <div class="container" id="choices">
+      <select name="" id="selectChoice">
+        <option value="null">Choose Edition</option>
+        <option value="2">Black's Law 2nd Edition</option>
+        <option value="4">Black's Law 4th Edition</option>
+      </select>
+    </div>
+    <div class="container" id="viewer">
+      <iframe src="" frameborder="0" id="pdfView"></iframe>
+    </div>
+    <script>
+      // ./blackslaw2nd.pdf
+      // ./blackslaw4th.pdf
+      const choice = document.getElementById("selectChoice");
+      choice.addEventListener("change", (e) => {
+        if (e.target.value != undefined && e.target.value != "null") {
+          console.log(e.target.value);
+          document.getElementById("pdfView").src = `${e.target.value}.pdf`;
+          document.getElementById("pdfView").style.height = "100vh";
+        }
+      });
+    </script>
+  </body>
+</html>
