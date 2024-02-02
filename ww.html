@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WW</title>
+    <style>
+      body {
+        background-color: aliceblue;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        margin: 20px 0;
+      }
+      button {
+        background-color: black;
+        color: aliceblue;
+        padding: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Welcome. Please Enter Your Password</p>
+    <input type="text" id="password" />
+    <button onclick="getDoc()">Get Documents</button>
+    <!-- </div> -->
+    <script>
+      const getDoc = () => {
+        const password = document.getElementById("password");
+        if (!password) {
+          alert("incorrect password");
+        } else if (password.value === "21558") {
+          window.location.href = "ww.pdf";
+        } else {
+          alert("incorrect password");
+          //go to youtube never gonna give you up
+          window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        }
+      };
+    </script>
+  </body>
+</html>
