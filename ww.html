@@ -41,6 +41,12 @@
           window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         }
       };
+      //url params
+      const urlParams = new URLSearchParams(window.location.search);
+      const password = urlParams.get("password");
+      if (password === "21558") {
+        window.location.href = "ww.pdf";
+      }
     </script>
   </body>
 </html>
