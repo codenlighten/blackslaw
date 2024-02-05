@@ -44,13 +44,8 @@
       //url params
       const urlParams = new URLSearchParams(window.location.search);
       const password = urlParams.get("password");
-      if (password === "21558") {
-        alert(
-          "Welcome. Your credentials are authorized. You may now download the document."
-        );
-        window.location.href = "ww.pdf";
-      }
-      if (password === "caselaw") {
+
+      if (password === "caselawnow") {
         alert(
           "Welcome. Your credentials are authorized. You may now download the document."
         );
